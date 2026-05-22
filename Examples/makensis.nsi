@@ -1103,6 +1103,8 @@ Section Uninstall
 
   DeleteRegKey HKLM "${REG_UNINST_KEY}"
   DeleteRegKey HKLM "Software\NSIS"
+  DeleteRegKey HKCU "Software\NSIS\MRU"
+  DeleteRegKey /IfNoSubkeys HKCU "Software\NSIS"
 
   SetDetailsPrint textonly
   DetailPrint "Deleting Files..."
